@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>منتجاتنا - الريان</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="El Ryan logo.png" type="image/png" />
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+    }
+
+    header {
+      background-color: #0077b6;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+    }
+
+    nav a.active {
+      border-bottom: 2px solid white;
+    }
+
+    .banner {
+      width: 100%;
+      height: 200px;
+      background: url('banner.jpg') center center / cover no-repeat;
+      border-radius: 0 0 12px 12px;
+      margin-bottom: 20px;
+    }
+
+    main h2 {
+      text-align: center;
+      margin: 30px 0 10px;
+      font-size: 26px;
+      color: #0077b6;
+    }
+
+    .filter-bar {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .filter-bar label {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+
+    .filter-bar select {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      width: 200px;
+      max-width: 90%;
+    }
+
+    .products-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product-content h3 {
+      margin: 0 0 10px;
+      color: #0077b6;
+      font-size: 20px;
+    }
+
+    .product-content p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .product-content a {
+      display: inline-block;
+      background-color: #0077b6;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .product-content a:hover {
+      background-color: #005f8e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f1f1;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>الريان لتجارة الأدوات الصحية</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="products.html" class="active">منتجاتنا</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="banner"></div>
+
+  <main>
+    <h2>تصفح منتجاتنا</h2>
+
+    <div class="filter-bar">
+      <label for="category">تصنيف المنتجات:</label>
+      <select id="category" onchange="filterProducts()">
+        <option value="all">الكل</option>
+        <option value="mixer">خلاطات</option>
+        <option value="bathtub">بانيوهات</option>
+        <option value="happy">جوليت</option>
+        <option value="smaile">اينوفا</option>
+        <option value="Sani">SANI PURE</option>
+      </select>
+    </div>
+
+    <div class="products-container" id="products">
+
+      <div class="product-card" data-category="mixer">
+        <img src="7.webp" alt="خلاط مياه">
+        <div class="product-content">
+          <h3>خلاط مياه إيطالي</h3>
+          <p>جودة عالية وخامة مقاومة للصدأ.</p>
+          <a href="mixer.html">عرض التفاصيل</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="bathtub">
+        <img src="_70_170_1_4.webp" alt="بانيو">
+        <div class="product-content">
+          <h3>بانيو الطيب</h3>
+          <p>مضاد للانزلاق بتصميم فخم ومتين.</p>
+          <a href="bathtub.html">عرض التفاصيل</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="happy">
+        <img src="482317855_670589318861395_9003377757032340773_n.jpg" alt="طقم">
+        <div class="product-content">
+          <h3>طقم هابي</h3>
+          <p>طقم عملي أنيق يناسب جميع المساحات.</p>
+          <a href="happy.html">عرض التفاصيل</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="smaile">
+        <img src="num30.webp" alt="حوض">
+        <div class="product-content">
+          <h3>طقم حمام اسمايل</h3>
+          <p>طقم عملي أنيق يناسب جميع المساحات.</p>
+          <a href="smaile.html">عرض التفاصيل</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="happy">
+        <img src="روما.png" alt="حوض">
+        <div class="product-content">
+          <h3>حوض روما</h3>
+          <p>طقم عملي أنيق يناسب جميع المساحات.</p>
+          <a href="roma.html">عرض التفاصيل</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="Sani">
+        <img src="Untitled design.png" alt="حوض">
+        <div class="product-content">
+          <h3>حوض كبلر</h3>
+          <p>طقم عملي أنيق يناسب جميع المساحات.</p>
+          <a href="kaplar.html">عرض التفاصيل</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="Sani">
+        <img src="تايتن.png" alt="حوض">
+        <div class="product-content">
+          <h3>حوض تايتن</h3>
+          <p>طقم عملي أنيق يناسب جميع المساحات.</p>
+          <a href="titin.html">عرض التفاصيل</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2025 جميع الحقوق محفوظة - الريان
+  </footer>
+
+  <script>
+    function filterProducts() {
+      const category = document.getElementById("category").value;
+      const products = document.querySelectorAll(".product-card");
+
+      products.forEach(product => {
+        if (category === "all" || product.dataset.category === category) {
+          product.style.display = "block";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

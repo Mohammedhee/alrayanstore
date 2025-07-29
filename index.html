@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الريان لتجارة الأدوات الصحية</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- خط عربي أنيق -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="El Ryan logo.png" type="image/png" />
+
+</head>
+<body>
+<header>
+  <div class="mobile-header">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <h1>الريان</h1>
+  </div>
+
+  <nav id="mobileMenu" class="mobile-menu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="products.html">منتجاتنا</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- رأس الصفحة -->
+  <header>
+    <h1>الريان لتجارة الأدوات الصحية</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="products.html">المنتجات</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- شريط العروض -->
+  <div class="offer-bar">
+    <div id="offer-text">🔥 عرض خاص: خصم 15% على جميع الخلاطات!</div>
+  </div>
+
+  <!-- صورة ترحيبية -->
+  <section class="hero-image">
+    <img src="3.png" alt="الريان لتجارة الأدوات الصحية">
+    <div class="hero-text">
+      <h1>مرحباً بكم في الريان</h1>
+      <p>أفضل الأدوات الصحية بجودة عالية وأسعار مناسبة</p>
+      <a href="products.html" class="hero-button">تصفح منتجاتنا</a>
+    </div>
+  </section>
+
+  <!-- السلايدر -->
+  <div class="slider-container">
+    <div class="slider" id="slider">
+      <img src="2.png" alt="منتج 2" />
+      
+      
+      
+    </div>
+    <div class="slider-buttons">
+      <button onclick="prevSlide()">‹</button>
+      <button onclick="nextSlide()">›</button>
+    </div>
+  </div>
+
+  <!-- المنتجات -->
+  <main>
+    <div class="product-box">
+      <h2>أحدث المنتجات</h2>
+      <p>اكتشف تشكيلتنا الجديدة من الأدوات الصحية ذات الجودة العالية والتصميم العصري.</p>
+    </div>
+  </main>
+
+  <!-- قسم واتساب للتواصل -->
+  <div class="whatsapp-contact">
+    <a href="https://wa.me/201000000000" target="_blank">
+      <img src="whatsapp.png" alt="WhatsApp" />
+      تواصل معنا عبر واتساب
+    </a>
+  </div>
+
+  <!-- الفوتر -->
+  <footer>© 2025 الريان - جميع الحقوق محفوظة</footer>
+
+  <!-- زر العودة للأعلى -->
+  <a href="#" class="back-to-top">🔝 للأعلى</a>
+
+  <!-- سكريبت -->
+  <script>
+    window.onload = function () {
+      // شريط العروض
+      const offers = [
+        "🔥 عرض خاص: خصم 15% على جميع الخلاطات!",
+        "🚚 شحن مجاني للطلبات فوق 1500 جنيه!",
+        "🛁 عروض الصيف مستمرة حتى نهاية الشهر!",
+        "🎉 أطقم حمامات تبدأ من 2999 جنيه فقط!"
+      ];
+      let currentOffer = 0;
+      const offerText = document.getElementById("offer-text");
+      setInterval(() => {
+        currentOffer = (currentOffer + 1) % offers.length;
+        offerText.innerText = offers[currentOffer];
+      }, 10000);
+
+      // السلايدر
+      let slideIndex = 0;
+      const slides = document.getElementById("slider");
+
+      function showSlide(index) {
+        const slideWidth = slides.children[0].clientWidth;
+        slides.style.transform = `translateX(-${index * slideWidth}px)`;
+      }
+
+      window.nextSlide = function () {
+        slideIndex = (slideIndex + 1) % slides.children.length;
+        showSlide(slideIndex);
+      }
+
+      window.prevSlide = function () {
+        slideIndex = (slideIndex - 1 + slides.children.length) % slides.children.length;
+        showSlide(slideIndex);
+      }
+
+      showSlide(slideIndex);
+      setInterval(nextSlide, 5000);
+
+      // زر العودة للأعلى
+      const backToTop = document.querySelector(".back-to-top");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+          backToTop.classList.add("show");
+        } else {
+          backToTop.classList.remove("show");
+        }
+      });
+    };
+    
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    if (menu.style.right === "0px") {
+      menu.style.right = "-300px";
+    } else {
+      menu.style.right = "0px";
+    }
+  }
+
+
+  </script>
+
+</body>
+</html>
