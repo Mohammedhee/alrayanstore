@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mohammedhee.github.io/alrayanstore/</loc>
-  </url>
-  <url>
-    <loc>https://mohammedhee.github.io/alrayanstore/about.html</loc>
-  </url>
-  <url>
-    <loc>https://mohammedhee.github.io/alrayanstore/products.html</loc>
-  </url>
-  <url>
-    <loc>https://mohammedhee.github.io/alrayanstore/contact.html</loc>
-  </url>
+  <url><loc>https://mohammedhee.github.io/alrayanstore/</loc></url>
+  <url><loc>https://mohammedhee.github.io/alrayanstore/about.html</loc></url>
+  <url><loc>https://mohammedhee.github.io/alrayanstore/products.html</loc></url>
+  <url><loc>https://mohammedhee.github.io/alrayanstore/contact.html</loc></url>
+  <url><loc>https://mohammedhee.github.io/alrayanstore/titin.html</loc></url>
+  <url><loc>https://mohammedhee.github.io/alrayanstore/kaplar.html</loc></url>
+  <url><loc>https://mohammedhee.github.io/alrayanstore/roma.html</loc></url>
+  <url><loc>https://mohammedhee.github.io/alrayanstore/smaile.html</loc></url>
+  <url><loc>https://mohammedhee.github.io/alrayanstore/happy.html</loc></url>
+  <url><loc>https://mohammedhee.github.io/alrayanstore/bathtub.html</loc></url>
+  <url><loc>https://mohammedhee.github.io/alrayanstore/mixer.html</loc></url>
 </urlset>
