@@ -243,22 +243,31 @@ footer {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  z-index: 1000;
   background-color: #25D366;
-  padding: 10px;
+  color: #fff;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: transform 0.3s ease;
-}
-
-.whatsapp-float img {
-  width: 40px;
-  height: 40px;
 }
 
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+   /* لتكون الأيقونة بيضاء */
+}
+
 
 /* تحسين عرض الهواتف */
 @media (max-width: 768px) {
