@@ -231,4 +231,49 @@ footer {
 [data-aos].aos-animate {
   opacity: 1;
 }
+/* زر واتساب عائم */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: #25D366;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
 
+/* تحسين عرض الهواتف */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-container {
+    padding: 20px;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .feature-box {
+    text-align: center;
+  }
+}
