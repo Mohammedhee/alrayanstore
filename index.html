@@ -6,12 +6,12 @@
   <meta name="google-site-verification" content="mRzKxDiAEkxWLlGuAbyX1aMZDZJACQ9oSQyBERnlO4k" />
   <title>الريان لتجارة الأدوات الصحية</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="El Ryan logo.png" type="image/png" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Cairo', sans-serif;
+      font-family: 'Tajawal', sans-serif;
       margin: 0;
       background-color: #f9f9f9;
       color: #222;
@@ -71,7 +71,7 @@
 
     .hero-text {
       position: absolute;
-      top: 50%;
+      top: 12%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
@@ -137,17 +137,26 @@
       background-color: #fff;
     }
 
-    .whatsapp-contact {
+    .whatsapp-float {
       position: fixed;
       bottom: 20px;
       left: 20px;
       z-index: 100;
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    .whatsapp-contact img {
-      width: 55px;
-      height: 55px;
+    .whatsapp-float img {
+      width: 35px;
+      height: 35px;
     }
+
     footer {
       background-color: #0077b6;
       color: white;
@@ -181,6 +190,7 @@
 
       .hero-text {
         font-size: 16px;
+        top: 10%;
       }
 
       header {
@@ -200,6 +210,9 @@
   </style>
 </head>
 <body>
+
+  <!-- باقي الكود كما هو -->
+
 
   <header>
     <h1>الريان</h1>
@@ -229,7 +242,6 @@
   <div class="slider-container" data-aos="fade-up">
     <div class="slider" id="slider">
       <img src="2.png" alt="منتج 1" />
-      
     </div>
     <div class="slider-buttons">
       <button onclick="prevSlide()">‹</button>
@@ -244,10 +256,9 @@
     </div>
   </main>
 
- <!-- زر واتساب -->
   <a href="https://wa.me/201234567890" class="whatsapp-float" target="_blank" aria-label="تواصل واتساب">
-  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="واتساب" />
-</a>
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="واتساب" />
+  </a>
 
   <footer data-aos="fade-up">
     © 2025 الريان - جميع الحقوق محفوظة
@@ -304,7 +315,4 @@
   </script>
 </body>
 </html>
-
-
-
 
