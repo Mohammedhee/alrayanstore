@@ -8,14 +8,140 @@
   <link rel="icon" href="El Ryan logo.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fc;
+      color: #222;
+    }
+
+    header {
+      background-color: #007b8a;
+      padding: 15px 20px;
+      color: white;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav ul li a.active {
+      border-bottom: 2px solid white;
+    }
+
+    .contact-section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .contact-container h2 {
+      font-size: 28px;
+      color: #007b8a;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .contact-container p {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .contact-info {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+      line-height: 1.8;
+    }
+
+    .contact-info div {
+      margin-bottom: 10px;
+    }
+
+    .contact-form {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .contact-form form button {
+      background-color: #007b8a;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form form button:hover {
+      background-color: #005f6b;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 100;
+    }
+
+    .whatsapp-float img {
+      width: 55px;
+      height: 55px;
+    }
+
+    footer {
+      background-color: #007b8a;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <div class="mobile-header">
-      <button class="menu-toggle" onclick="document.querySelector('.mobile-menu').style.right = '0'">☰</button>
-      <h1 style="margin: 0; font-size: 18px;">الريان</h1>
-    </div>
+    <h1>الريان لتجارة الأدوات الصحية</h1>
     <nav>
       <ul>
         <li><a href="index.html">الرئيسية</a></li>
@@ -26,46 +152,32 @@
     </nav>
   </header>
 
-  <div class="mobile-menu">
-    <button class="close-btn" onclick="document.querySelector('.mobile-menu').style.right = '-300px'">✖</button>
-    <ul>
-      <li><a href="index.html">الرئيسية</a></li>
-      <li><a href="products.html">المنتجات</a></li>
-      <li><a href="about.html">من نحن</a></li>
-      <li><a href="contact.html">تواصل معنا</a></li>
-    </ul>
-  </div>
-
   <section class="contact-section" data-aos="fade-up">
     <div class="contact-container">
       <h2>📞 تواصل معنا</h2>
-      <p>نحن هنا لخدمتك، لا تتردد في التواصل معنا عبر النموذج أو المعلومات أدناه.</p>
+      <p>نحن هنا لخدمتك في أي وقت! يمكنك التواصل معنا من خلال المعلومات التالية أو عبر النموذج.</p>
 
       <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
         <div><strong>📍 العنوان:</strong> كفر سنجرج، منوف، المنوفية</div>
         <div><strong>📞 الهاتف:</strong> <a href="tel:01123456789">01123456789</a></div>
-        <div><strong>📧 البريد الإلكتروني:</strong> <a href="mailto:alryanltjartaladwatalshyt@gmail.com">alryanltjartaladwatalshyt@gmail.com</a></div>
+        <div><strong>📧 البريد:</strong> <a href="mailto:alryanltjartaladwatalshyt@gmail.com">alryanltjartaladwatalshyt@gmail.com</a></div>
       </div>
 
       <div class="contact-form" data-aos="fade-up" data-aos-delay="200">
-        <h2>راسلنا الآن</h2>
         <form id="contact-form">
-          <input type="text" name="name" placeholder="الاسم" required />
-          <input type="email" name="email" placeholder="البريد الإلكتروني" required />
-          <textarea name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+          <input type="text" name="name" placeholder="الاسم" required>
+          <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+          <textarea name="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
           <button type="submit">إرسال</button>
-          <div id="success-message" style="display:none; margin-top:15px; color:green; font-weight:bold;">
-            ✅ تم إرسال رسالتك بنجاح، شكرًا لتواصلك معنا!
-          </div>
+          <div id="success-message" style="display:none; color:green; margin-top:10px;">✅ تم إرسال رسالتك بنجاح!</div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- زر واتساب عائم -->
   <div class="whatsapp-float">
-    <a href="https://wa.me/201123456789" target="_blank">
-      <img src="whatsapp.png" alt="تواصل عبر واتساب">
+    <a href="https://wa.me/201123456789" target="_blank" title="راسلنا على واتساب">
+      <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="واتساب">
     </a>
   </div>
 
@@ -73,29 +185,16 @@
     جميع الحقوق محفوظة © الريان 2025
   </footer>
 
-  <a href="#" class="back-to-top">↑</a>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true });</script>
   <script>
-    // رسالة التأكيد بعد الإرسال
     document.getElementById("contact-form").addEventListener("submit", function(e) {
       e.preventDefault();
       document.getElementById("success-message").style.display = "block";
       this.reset();
     });
-
-    // زر العودة لأعلى
-    const toTop = document.querySelector(".back-to-top");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) {
-        toTop.classList.add("show");
-      } else {
-        toTop.classList.remove("show");
-      }
-    });
   </script>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ duration: 800, once: true });</script>
 
 </body>
 </html>
+
