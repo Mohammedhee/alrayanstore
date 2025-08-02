@@ -3,12 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>تواصل معنا</title>
+  <title>تواصل معنا - الريان</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="El Ryan logo.png" type="image/png" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
 
+  <!-- قائمة الهاتف -->
+  <div class="mobile-header">
+    <h3 style="color: white;">الريان</h3>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-menu').style.right='0'">&#9776;</button>
+  </div>
+
+  <div class="mobile-menu">
+    <button class="close-btn" onclick="document.querySelector('.mobile-menu').style.right='-300px'">&times;</button>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="products.html">المنتجات</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a class="active" href="contact.html">تواصل معنا</a></li>
+    </ul>
+  </div>
+
+  <!-- الهيدر -->
   <header>
     <h1>الريان لتجارة الأدوات الصحية</h1>
     <nav>
@@ -21,47 +39,64 @@
     </nav>
   </header>
 
-  <section class="contact-section">
+  <!-- القسم الرئيسي -->
+  <section class="contact-section" style="padding: 30px;" data-aos="fade-up">
     <div class="contact-container">
       <h2>📞 تواصل معنا</h2>
       <p>نحن هنا لخدمتك، لا تتردد في التواصل معنا عبر النموذج أو المعلومات أدناه.</p>
 
-      <div class="contact-info">
+      <div class="contact-info" style="margin-top: 20px;">
         <div><strong>📍 العنوان:</strong> كفر سنجرج، منوف، المنوفية</div>
         <div><strong>📞 الهاتف:</strong> <a href="tel:01123456789">01123456789</a></div>
-        <div><strong>📧 البريد الإلكتروني:</strong> <a href="mailto:info@alrayyan.com">alryanltjartaladwatalshyt@gmail.com</a></div>
+        <div><strong>📧 البريد الإلكتروني:</strong> <a href="mailto:alryanltjartaladwatalshyt@gmail.com">alryanltjartaladwatalshyt@gmail.com</a></div>
       </div>
 
-      <div class="contact-form">
-  <h2>راسلنا الآن</h2>
-  <form id="contact-form">
-    <input type="text" name="name" placeholder="الاسم" required />
-    <input type="email" name="email" placeholder="البريد الإلكتروني" required />
-    <textarea name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
-    <button type="submit">إرسال</button>
-    <!-- رسالة التأكيد  -->
-  <div id="success-message" style="display:none; margin-top:15px; color:green; font-weight:bold;">
-    ✅ تم إرسال رسالتك بنجاح، شكرًا لتواصلك معنا!
-  </div>
-  </form>
+      <div class="contact-form" style="margin-top: 30px;">
+        <h2>راسلنا الآن</h2>
+        <form id="contact-form" onsubmit="event.preventDefault(); showSuccessMessage();">
+          <input type="text" name="name" placeholder="الاسم" required />
+          <input type="email" name="email" placeholder="البريد الإلكتروني" required />
+          <textarea name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+          <button type="submit">إرسال</button>
 
-  
-</div>
-
-      
-      <div class="whatsapp-contact">
-  <a href="https://wa.me/201123456789" target="_blank">
-    <img src="whatsapp.png" alt="واتساب"> تواصل عبر واتساب
-  </a>
-</div>
-
+          <div id="success-message" style="display:none; margin-top:15px; color:green; font-weight:bold;">
+            ✅ تم إرسال رسالتك بنجاح، شكرًا لتواصلك معنا!
+          </div>
+        </form>
+      </div>
     </div>
   </section>
-  
 
+  <!-- زر واتساب عائم -->
+  <a class="whatsapp-float" href="https://wa.me/201123456789" target="_blank" title="تواصل واتساب">
+    <img src="whatsapp.png" alt="واتساب">
+  </a>
+
+  <!-- زر الرجوع للأعلى -->
+  <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+  <!-- الفوتر -->
   <footer>
     جميع الحقوق محفوظة © الريان 2025
   </footer>
 
+  <!-- AOS مكتبة -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // زر الرجوع للأعلى
+    window.onscroll = function() {
+      document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
+    };
+
+    // رسالة نجاح للنموذج
+    function showSuccessMessage() {
+      document.getElementById('success-message').style.display = 'block';
+      document.getElementById('contact-form').reset();
+    }
+  </script>
 </body>
 </html>
+
+
