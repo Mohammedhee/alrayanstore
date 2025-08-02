@@ -25,6 +25,10 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+  
 </head>
 
 <body>
@@ -168,11 +172,23 @@
     }
   }
 
+  window.onload = function () {
+    document.body.classList.add("loaded");
+    // (الكود اللي عندك هنا باقي زي ما هو)
+  };
+
+
 
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 
 </body>
 </html>
+
 
 
 
