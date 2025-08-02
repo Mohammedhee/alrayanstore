@@ -104,39 +104,29 @@
       margin-top: 40px;
     }
 
-    /* زر واتساب عائم */
-    .whatsapp-float {
+   .whatsapp-contact {
       position: fixed;
       bottom: 20px;
       left: 20px;
-      z-index: 1000;
-      background-color: #25D366;
-      padding: 12px;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
+      z-index: 100;
     }
 
-    .whatsapp-float img {
-      width: 40px;
-      height: 40px;
+    .whatsapp-contact img {
+      width: 55px;
+      height: 55px;
     }
 
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
+    @media screen and (max-width: 600px) {
+      .product-card img {
+        height: 160px;
       }
 
-      .features {
-        flex-direction: column;
+      .product-content h3 {
+        font-size: 18px;
       }
 
-      header h1 {
-        font-size: 22px;
+      .product-content p {
+        font-size: 14px;
       }
     }
   </style>
@@ -200,4 +190,5 @@
   <script>AOS.init({ duration: 1000 });</script>
 </body>
 </html>
+
 
