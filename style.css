@@ -277,3 +277,11 @@ footer {
     text-align: center;
   }
 }
+nav ul li a {
+  transition: background 0.3s ease;
+}
+
+.hero-text h1,
+.hero-text p {
+  text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
