@@ -6,85 +6,264 @@
   <meta name="google-site-verification" content="mRzKxDiAEkxWLlGuAbyX1aMZDZJACQ9oSQyBERnlO4k" />
   <title>الريان لتجارة الأدوات الصحية</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="El Ryan logo.png" type="image/png" />
-  <!-- مكتبة AOS للأنيميشن -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+
+    header {
+      background-color: #0077b6;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 22px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #023e8a;
+    }
+
+    .offer-bar {
+      background-color: #ffdd57;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .hero-image {
+      position: relative;
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .hero-text h1 {
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+
+    .hero-button {
+      background-color: #0077b6;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .slider-container {
+      overflow: hidden;
+      max-width: 100%;
+      margin: 30px auto;
+      position: relative;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto;
+    }
+
+    .slider-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .slider-buttons button {
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .product-box {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #fff;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+      background-color: #25D366;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp-float img {
+      width: 40px;
+      height: 40px;
+    }
+
+    footer {
+      background-color: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 80px;
+      left: 20px;
+      background: #0077b6;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 50px;
+      text-decoration: none;
+      display: none;
+    }
+
+    .back-to-top.show {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 20px;
+      }
+
+      .slider-buttons button {
+        font-size: 18px;
+        padding: 6px;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <div class="mobile-header">
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <header>
     <h1>الريان</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">الرئيسية</a></li>
+        <li><a href="products.html">المنتجات</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="offer-bar" data-aos="zoom-in">
+    <div id="offer-text">🔥 عرض خاص: خصم 15% على جميع الخلاطات!</div>
   </div>
-  <nav id="mobileMenu" class="mobile-menu">
-    <button class="close-btn" onclick="toggleMenu()">✖</button>
-    <ul>
-      <li><a href="index.html">الرئيسية</a></li>
-      <li><a href="about.html">من نحن</a></li>
-      <li><a href="products.html">منتجاتنا</a></li>
-      <li><a href="contact.html">اتصل بنا</a></li>
-    </ul>
-  </nav>
-</header>
 
-<header>
-  <h1 data-aos="fade-down">الريان لتجارة الأدوات الصحية</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">الرئيسية</a></li>
-      <li><a href="products.html">المنتجات</a></li>
-      <li><a href="about.html">من نحن</a></li>
-      <li><a href="contact.html">اتصل بنا</a></li>
-    </ul>
-  </nav>
-</header>
+  <section class="hero-image">
+    <img src="3.png" alt="الريان لتجارة الأدوات الصحية" />
+    <div class="hero-text" data-aos="fade-up">
+      <h1>مرحباً بكم في الريان</h1>
+      <p>أفضل الأدوات الصحية بجودة عالية وأسعار مناسبة</p>
+      <a href="products.html" class="hero-button">تصفح منتجاتنا</a>
+    </div>
+  </section>
 
-<div class="offer-bar" data-aos="zoom-in">
-  <div id="offer-text">🔥 عرض خاص: خصم 15% على جميع الخلاطات!</div>
-</div>
-
-<section class="hero-image">
-  <img src="3.png" alt="الريان لتجارة الأدوات الصحية">
-  <div class="hero-text" data-aos="fade-up">
-    <h1>مرحباً بكم في الريان</h1>
-    <p>أفضل الأدوات الصحية بجودة عالية وأسعار مناسبة</p>
-    <a href="products.html" class="hero-button">تصفح منتجاتنا</a>
+  <div class="slider-container" data-aos="fade-up">
+    <div class="slider" id="slider">
+      <img src="2.png" alt="منتج 1" />
+      <img src="3.png" alt="منتج 2" />
+    </div>
+    <div class="slider-buttons">
+      <button onclick="prevSlide()">‹</button>
+      <button onclick="nextSlide()">›</button>
+    </div>
   </div>
-</section>
 
-<div class="slider-container" data-aos="fade-up">
-  <div class="slider" id="slider">
-    <img src="2.png" alt="منتج 2" />
-  </div>
-  <div class="slider-buttons">
-    <button onclick="prevSlide()">‹</button>
-    <button onclick="nextSlide()">›</button>
-  </div>
-</div>
+  <main>
+    <div class="product-box" data-aos="fade-up">
+      <h2>أحدث المنتجات</h2>
+      <p>اكتشف تشكيلتنا الجديدة من الأدوات الصحية ذات الجودة العالية والتصميم العصري.</p>
+    </div>
+  </main>
 
-<main>
-  <div class="product-box" data-aos="fade-up">
-    <h2>أحدث المنتجات</h2>
-    <p>اكتشف تشكيلتنا الجديدة من الأدوات الصحية ذات الجودة العالية والتصميم العصري.</p>
-  </div>
-</main>
-
-<!-- زر واتساب -->
-<div class="whatsapp-contact">
-  <a href="https://wa.me/201000000000" target="_blank">
-    <img src="whatsapp.png" alt="WhatsApp" />
+  <!-- زر واتساب عائم -->
+  <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" />
   </a>
-</div>
 
-<footer data-aos="fade-up">© 2025 الريان - جميع الحقوق محفوظة</footer>
-<a href="#" class="back-to-top">🔝 للأعلى</a>
+  <footer data-aos="fade-up">
+    © 2025 الريان - جميع الحقوق محفوظة
+  </footer>
 
-<!-- JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init({ duration: 1000, once: true });</script>
-<script>
-  window.onload = function () {
+  <a href="#" class="back-to-top">🔝 للأعلى</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
     const offers = [
       "🔥 عرض خاص: خصم 15% على جميع الخلاطات!",
       "🚚 شحن مجاني للطلبات فوق 1500 جنيه!",
@@ -100,18 +279,22 @@
 
     let slideIndex = 0;
     const slides = document.getElementById("slider");
+
     function showSlide(index) {
       const slideWidth = slides.children[0].clientWidth;
       slides.style.transform = `translateX(-${index * slideWidth}px)`;
     }
+
     window.nextSlide = function () {
       slideIndex = (slideIndex + 1) % slides.children.length;
       showSlide(slideIndex);
-    }
+    };
+
     window.prevSlide = function () {
       slideIndex = (slideIndex - 1 + slides.children.length) % slides.children.length;
       showSlide(slideIndex);
-    }
+    };
+
     showSlide(slideIndex);
     setInterval(nextSlide, 5000);
 
@@ -123,19 +306,6 @@
         backToTop.classList.remove("show");
       }
     });
-  };
-
-  function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    if (menu.style.right === "0px") {
-      menu.style.right = "-300px";
-    } else {
-      menu.style.right = "0px";
-    }
-  }
-</script>
+  </script>
 </body>
 </html>
-
-
-
