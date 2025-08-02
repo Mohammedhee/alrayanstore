@@ -52,6 +52,8 @@ nav ul li a:hover {
 .hero-image img {
   width: 100%;
   height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .hero-text {
@@ -61,7 +63,8 @@ nav ul li a:hover {
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .hero-button {
@@ -78,14 +81,20 @@ nav ul li a:hover {
 }
 
 .product-box {
-  padding: 20px;
+  padding: 30px 15px;
   text-align: center;
+  background: white;
+  border-radius: 12px;
+  margin: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .slider-container {
   position: relative;
   overflow: hidden;
   width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
 .slider {
@@ -96,6 +105,7 @@ nav ul li a:hover {
 .slider img {
   width: 100%;
   max-width: 100%;
+  border-radius: 12px;
 }
 
 .slider-buttons {
@@ -104,9 +114,17 @@ nav ul li a:hover {
 }
 
 .slider-buttons button {
-  padding: 5px 15px;
+  padding: 8px 20px;
   font-size: 18px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
+}
+
+.slider-buttons button:hover {
+  background: #0056b3;
 }
 
 .whatsapp-contact {
@@ -128,6 +146,7 @@ footer {
   padding: 10px;
   position: relative;
   margin-top: 40px;
+  border-radius: 12px 12px 0 0;
 }
 
 .back-to-top {
@@ -202,7 +221,12 @@ footer {
   .mobile-header {
     display: flex;
   }
+
   nav ul {
     display: none;
+  }
+
+  .product-box {
+    margin: 10px;
   }
 }
