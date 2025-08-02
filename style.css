@@ -6,6 +6,7 @@ body {
   background: #f8f9fa;
   direction: rtl;
   color: #333;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -52,8 +53,6 @@ nav ul li a:hover {
 .hero-image img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .hero-text {
@@ -63,8 +62,7 @@ nav ul li a:hover {
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 10px;
 }
 
 .hero-button {
@@ -81,20 +79,14 @@ nav ul li a:hover {
 }
 
 .product-box {
-  padding: 30px 15px;
+  padding: 20px;
   text-align: center;
-  background: white;
-  border-radius: 12px;
-  margin: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .slider-container {
   position: relative;
   overflow: hidden;
   width: 100%;
-  border-radius: 12px;
-  margin-bottom: 20px;
 }
 
 .slider {
@@ -105,7 +97,6 @@ nav ul li a:hover {
 .slider img {
   width: 100%;
   max-width: 100%;
-  border-radius: 12px;
 }
 
 .slider-buttons {
@@ -114,17 +105,9 @@ nav ul li a:hover {
 }
 
 .slider-buttons button {
-  padding: 8px 20px;
+  padding: 5px 15px;
   font-size: 18px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
   cursor: pointer;
-}
-
-.slider-buttons button:hover {
-  background: #0056b3;
 }
 
 .whatsapp-contact {
@@ -132,11 +115,24 @@ nav ul li a:hover {
   bottom: 20px;
   left: 20px;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #25d366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.whatsapp-contact:hover {
+  background: #1ebc59;
 }
 
 .whatsapp-contact img {
-  width: 50px;
-  height: 50px;
+  width: 24px;
+  height: 24px;
 }
 
 footer {
@@ -146,7 +142,6 @@ footer {
   padding: 10px;
   position: relative;
   margin-top: 40px;
-  border-radius: 12px 12px 0 0;
 }
 
 .back-to-top {
@@ -159,6 +154,7 @@ footer {
   border-radius: 30px;
   text-decoration: none;
   display: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .back-to-top.show {
@@ -221,61 +217,18 @@ footer {
   .mobile-header {
     display: flex;
   }
-
   nav ul {
     display: none;
   }
-  body {
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
 }
 
-body.loaded {
+/* AOS animation delay example */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos].aos-animate {
   opacity: 1;
 }
-
-
-  .product-box {
-    margin: 10px;
-  }
-}
-h1, h2 {
-  font-family: 'El Messiri', 'Cairo', sans-serif;
-}
-h1, h2 {
-  animation: slideIn 0.8s ease-out;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.whatsapp-contact {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 999;
-  background-color: #25D366;
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-contact:hover {
-  transform: scale(1.1);
-}
-
-.whatsapp-contact img {
-  width: 40px;
-  height: 40px;
-  display: block;
-}
-
 
