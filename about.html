@@ -104,29 +104,39 @@
       margin-top: 40px;
     }
 
-   .whatsapp-contact {
+    /* زر واتساب عائم */
+    .whatsapp-float {
       position: fixed;
       bottom: 20px;
       left: 20px;
-      z-index: 100;
+      z-index: 1000;
+      background-color: #25D366;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
     }
 
-    .whatsapp-contact img {
-      width: 55px;
-      height: 55px;
+    .whatsapp-float img {
+      width: 40px;
+      height: 40px;
     }
 
-    @media screen and (max-width: 600px) {
-      .product-card img {
-        height: 160px;
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
       }
 
-      .product-content h3 {
-        font-size: 18px;
+      .features {
+        flex-direction: column;
       }
 
-      .product-content p {
-        font-size: 14px;
+      header h1 {
+        font-size: 22px;
       }
     }
   </style>
@@ -174,12 +184,10 @@
     </div>
   </section>
 
- <!-- زر واتساب -->
-  <div class="whatsapp-contact">
-    <a href="https://wa.me/201234567890" target="_blank">
-      <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="تواصل واتساب" />
-    </a>
-  </div>
+  <!-- زر واتساب -->
+  <a href="https://wa.me/201234567890" class="whatsapp-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="واتساب">
+  </a>
 
   <footer>
     © 2025 الريان - جميع الحقوق محفوظة
@@ -190,5 +198,3 @@
   <script>AOS.init({ duration: 1000 });</script>
 </body>
 </html>
-
-
