@@ -30,6 +30,7 @@ nav ul li a {
   color: white;
   text-decoration: none;
   padding: 5px 10px;
+  transition: background 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -222,7 +223,6 @@ footer {
   }
 }
 
-/* AOS animation delay example */
 [data-aos] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -231,6 +231,7 @@ footer {
 [data-aos].aos-animate {
   opacity: 1;
 }
+
 /* زر واتساب عائم */
 .whatsapp-float {
   position: fixed;
@@ -243,15 +244,16 @@ footer {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
 }
+
 .whatsapp-float img {
   width: 40px;
   height: 40px;
 }
+
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
 
-/* تحسين عرض الهواتف */
 @media (max-width: 768px) {
   header h1 {
     font-size: 20px;
@@ -277,11 +279,69 @@ footer {
     text-align: center;
   }
 }
-nav ul li a {
-  transition: background 0.3s ease;
-}
 
 .hero-text h1,
 .hero-text p {
   text-shadow: 0 2px 5px rgba(0,0,0,0.4);
 }
+
+/* تنسيق نموذج التواصل */
+.contact-section {
+  padding: 40px 20px;
+  background-color: #f1f1f1;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Cairo', sans-serif;
+  background-color: #fff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #218838;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
