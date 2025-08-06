@@ -335,3 +335,20 @@ nav ul li a {
 .hero-text p {
   text-shadow: 0 2px 5px rgba(0,0,0,0.4);
 }
+.mobile-products-button {
+  display: none;
+  text-align: center;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .mobile-products-button {
+    display: block;
+  }
+}
+
+.product-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 119, 182, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
