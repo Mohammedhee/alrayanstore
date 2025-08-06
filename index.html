@@ -247,7 +247,7 @@
   </section>
   <div class="slider-container" data-aos="fade-up">
     <div class="slider" id="slider">
-      <img src="2.png" alt="منتج 1" loading="lazy" />
+      <img src="111.png" alt="منتج 1" loading="lazy" />
 
     </div>
     <div class="slider-buttons">
@@ -270,7 +270,8 @@
   <footer data-aos="fade-up">
     © 2025 الريان - جميع الحقوق محفوظة
   </footer>
-  <a href="#" class="back-to-top">🔝 للأعلى</a>
+  <button onclick="scrollToTop()" id="backToTop" title="العودة للأعلى">↑</button>
+
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
@@ -314,5 +315,25 @@
       backToTop.classList.toggle("show", window.scrollY > 200);
     });
   </script>
+  <script>
+  // إظهار الزر عند التمرير لأسفل
+  window.onscroll = function() {
+    const button = document.getElementById("backToTop");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      button.style.display = "block";
+    } else {
+      button.style.display = "none";
+    }
+  };
+
+  // التمرير للأعلى عند الضغط
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
 </body>
 </html>
